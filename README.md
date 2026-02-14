@@ -7,11 +7,13 @@ Currently it is specialized for simple chain stitch which is a foundational stit
 DEMO: https://huggingface.co/spaces/samriddhisr/CROCO
 
 ###Feature extraction:
+
 **DINO Embeddings:** We pass every video frame through the DINOv2 model. 
 **Timestamps:** For every frame processed, we record a timestamp. The stitch boundary labelling was done through recording timestamps and not frames due to different FPS of the training videos. 
 
 
 ###Training:
+
 We used a Bi-GRU as the core of our model. Gaussian smoothing was used to create a probability mountain around each stitch since the goal was to count the number of stitches.
 
 We utilized a lower sigma (0.25) in our Gaussian smoothing function to define sharper, more distinct probability peaks around the stitch boundaries.
