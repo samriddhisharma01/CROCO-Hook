@@ -6,7 +6,7 @@ import glob
 from torchvision import transforms
 
 # --- CONFIGURATION ---
-INPUT_FOLDER = "data"    # Folder containing your .mp4 files
+INPUT_FOLDER = "data"    # Folder containing .mp4 files
 OUTPUT_FOLDER = "output" # Where .npz files will be saved
 MODEL_TYPE = "dinov2_vits14"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -69,4 +69,4 @@ for video_path in video_paths:
     )
     print(f"Successfully saved features to: {save_path}")
 
-print("Done!")
+print("Done.")
